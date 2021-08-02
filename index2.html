@@ -13,13 +13,12 @@
 <body>
   <div id="app">
     <button @click="openModel">開く</button>
-    <div id="overlay" v-show="showContent" @click="closeModel">
+    <div id="overlay" v-show="showContent" @click.self="closeModel">
       <div id="content">
         <p>モーダルウィンドウ</p>
         <p><button @click="closeModel">閉じる</button></p>
       </div>
     </div>
-    
   </div>
 
   <script>
